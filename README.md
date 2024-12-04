@@ -50,13 +50,15 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_aws_external_id"></a> [aws\_external\_id](#input\_aws\_external\_id) | External ID to use when connecting an AWS account with Rad | `string` | `""` | no |
-| <a name="input_rad-security_assumed_role_arn"></a> [rad-security\_assumed\_role\_arn](#input\_rad-security\_assumed\_role\_arn) | Rad Security Role that will assume the rad-security-connect IAM role you create to interact with resources in your account | `string` | `"arn:aws:iam::955322216602:role/imagescan-scraper"` | no |
+| <a name="input_aws_external_id"></a> [aws\_external\_id](#input\_aws\_external\_id) | External ID to use when connecting an AWS account with Rad Security. | `string` | `""` | no |
+| <a name="input_rad-security_assumed_role_arn"></a> [rad-security\_assumed\_role\_arn](#input\_rad-security\_assumed\_role\_arn) | Rad Security Role that will assume the rad-security-connect IAM role you create to interact with resources in your account. | `string` | `"arn:aws:iam::955322216602:role/imagescan-scraper"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A set of tags to associate with the resources in this module. | `map(string)` | `{}` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_role_arn"></a> [role\_arn](#output\_role\_arn) | AWS IAM Role ARN which Rad Security uses to scan ECR registry. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## License
